@@ -1,0 +1,31 @@
+{
+    "terminal.integrated.fontFamily": "'Ubuntu Mono Derivative Powerline', monospace",
+    "terminal.integrated.fontSize": 15,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "keyboard.dispatch": "keyCode",
+    "vim.leader": ",",
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","t"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen",
+                    "args": []
+                }
+            ]
+        },{
+            "before": [";"],
+            "after": [":"]
+        },{
+            "before": ["<leader>","q"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        }
+    ]
+}
