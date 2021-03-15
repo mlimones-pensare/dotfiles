@@ -130,6 +130,9 @@ alias work='cd ~/Documents/work'
 alias web='cd ~/Documents/mycode/web'
 alias dotfiles='cd ~/Documents/mycode/config/linux'
 alias rtp='npm run build && npm run package && npm run deploy'
+alias bancos='cd ~/Documents/work/bancos'
+alias sail='bash vendor/bin/sail'
+alias genpass='date --iso-8601=ns | sha256sum | base64 | head -c 32 ; echo'
 
 export PATH="/home/manuel/software/bin:$PATH"
 export PATH="/home/manuel/.config/composer/vendor/bin:$PATH"
@@ -140,9 +143,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pyenv enconfig
-#export PATH="/home/manuel/.pyenv/bin:$PATH"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
+export PATH="/home/manuel/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 #complete -C $(which aws_completer) aws
 
 # rbenv config
@@ -162,5 +165,10 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 # emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
+# software
+export PATH=$PATH:$HOME/software/bin
+
 #export flutter
 export PATH="$PATH:/home/manuel/Android/flutter/bin"
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse/extra/usr/lib/x86_64-linux-gnu/
